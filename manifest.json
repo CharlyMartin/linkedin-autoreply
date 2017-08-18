@@ -8,7 +8,10 @@
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Click here!",
+    // default title is a popup message when the icon is hovered over.
   },
+  "author": "Charly MARTIN"
 
 }

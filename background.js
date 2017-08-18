@@ -21,11 +21,22 @@
 // #ember1610 > div > div > p > button
 
 
+function pending() {
+  if (inviteList) {
+    return true
+  } else {
+    return false
+  }
+};
+
 function run() {
-  // 1. Navigate to /mynetwork/invitation-manager/
-  // 2. inject Accept invite script
-  // 3. When message page loaded -> inject second script
-  // 4. When back to /mynetwork/invitation-manager/ -> inject Accept invite script again...
+  // Navigate to /mynetwork/invitation-manager/
+  // call pending() -> Check if any pending invitations
+  // return if no invite
+  //
+  // inject Accept invite script
+  // When message page loaded -> inject second script
+  // When back to /mynetwork/invitation-manager/ -> inject Accept invite script again...
 }
 
 chrome.BrowserAction.onClicked.addListener(run)

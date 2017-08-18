@@ -19,3 +19,13 @@
 
 // // Button "Message" (thing to click)
 // #ember1610 > div > div > p > button
+
+
+function run() {
+  // 1. Navigate to /mynetwork/invitation-manager/
+  // 2. inject Accept invite script
+  // 3. When message page loaded -> inject second script
+  // 4. When back to /mynetwork/invitation-manager/ -> inject Accept invite script again...
+}
+
+chrome.BrowserAction.onClicked.addListener(run)

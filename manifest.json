@@ -1,17 +1,25 @@
 {
   "manifest_version": 2,
-  "version": 1.0,
+  "version": "1.0",
   "name": "LinkedIn AutoReply",
-  "description": "Automatically accept your new LinkedIn connections and send
-                  them the customizable message of your choice.",
-  "default_locale": "en",
+  "description": "Accept new LinkedIn connections and send them custom messages in just one click",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "assets/icon.png",
     "default_popup": "popup.html",
-    "default_title": "Click here!",
-    // default title is a popup message when the icon is hovered over.
+    "default_title": "Click here!"
+    // default title is a popup message when the icon is hovered over
   },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/mynetwork/invitation-manager/",
+        "https://www.linkedin.com/mynetwork/"
+      ],
+      "js": ["scripts/accept-invite.js"]
+    }
+  ],
   "author": "Charly MARTIN"
 
 }

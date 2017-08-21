@@ -1,18 +1,35 @@
 // Variables
-// const inviteList = document.querySelector('ul.mn-invitation-list')
-// const acceptBtn = inviteList.querySelector('li:first-child button[data-control-name="accept"]')
+console.log("This is the invitation page")
 
+// Functions
+function acceptInvite() {
+  const list = inviteExists();
+  console.log(list);
 
+  if (list) {
+    const acceptBtn = list.querySelector('li:first-child button[data-control-name="accept"]');
+    console.log(acceptBtn);
+    acceptBtn.click();
+    window.setTimeout(clickMessagePopup, 1000);
+  }
+  else {
+    window.alert("All invitations caught up");
+  };
+};
 
-// function acceptInvite() {
-//   acceptBtn.click()
-// };
+function inviteExists() {
+  const inviteList = document.querySelector('ul.mn-invitation-list');
+  console.log(inviteList);
+  return inviteList;
+};
 
-// function run(argument) {
-//   acceptInvite if pending
-// }
+function clickMessagePopup() {
+  console.log("clickMessagePopup")
+  // select the click thing and click it!
+}
 
-// // Events
-// document.addEventListener('pageContentLoaded', run)
+// Events
+// document.addEventListener('load', test)
 
-console.log("Hello world!")
+window.setTimeout(acceptInvite, 1500)
+

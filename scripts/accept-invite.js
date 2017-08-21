@@ -1,4 +1,3 @@
-// Variables
 console.log("This is the invitation page")
 
 // Functions
@@ -32,8 +31,9 @@ function clickMessagePopup() {
 
 }
 
-// Events
-// document.addEventListener('load', test)
-
+// Running page's scripts after 1.5s
 window.setTimeout(acceptInvite, 1500)
 
+
+// document.addEventListener('load', test) => not working
+// Variables => not working, trying to select then before content is loaded. Hence null.

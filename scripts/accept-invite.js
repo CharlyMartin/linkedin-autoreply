@@ -3,6 +3,7 @@ console.log("This is the invitation page")
 
 // Functions
 function acceptInvite() {
+  console.log("Entering acceptInvite function");
   const list = inviteExists();
   console.log(list);
 
@@ -18,14 +19,17 @@ function acceptInvite() {
 };
 
 function inviteExists() {
+  console.log("Entering inviteExists function");
   const inviteList = document.querySelector('ul.mn-invitation-list');
   console.log(inviteList);
   return inviteList;
 };
 
 function clickMessagePopup() {
-  console.log("clickMessagePopup")
-  // select the click thing and click it!
+  console.log("Entering clickMessagePopup function");
+  const messageBtn = document.querySelector('#ember1610 > div > div > p > button');
+  console.log(messageBtn);
+
 }
 
 // Events

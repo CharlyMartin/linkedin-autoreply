@@ -1,4 +1,4 @@
-console.log("accept-invite.js injected")
+console.log("accept-invite.js injected");
 
 // Functions
 function clickAcceptBtn() {

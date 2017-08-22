@@ -1,15 +1,12 @@
-// _______________________________________
-// NAVIGATING TO MESSAGE PAGE
-// _______________________________________
-// Extract the name of the dude (in the recipient input)
+console.log("send-message.js injected");
 
 function extractName() {
   console.log(arguments.callee.name);
 
-  const fullName = document.querySelector(".msg-connections-lookup__recipient-name").innerText;
+  const fullName = document.querySelector("span.msg-connections-lookup__recipient-name").innerText.trim();
   return {
-    "first": fullName.split[0],
-    "last": fullName.split[-1],
+    "first": fullName.split(" ")[0],
+    "last": fullName.split(" ")[this.length - 1],
   }
 };
 

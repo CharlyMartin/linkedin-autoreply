@@ -1,7 +1,7 @@
 console.log("accept-invite.js injected");
 
 // Functions
-function listExists() {
+function selectList() {
   console.log(arguments.callee.name);
 
   const inviteList = document.querySelector('ul.mn-invitation-list');
@@ -12,21 +12,27 @@ function listExists() {
 function selectFirstFrom(list) {
   console.log(arguments.callee.name);
 
-  const first = list.querySelector('li:first-child button[data-control-name="accept"]');
+  const first = list.querySelector('li:first-child');
   console.log(first);
   return first;
-}
+};
 
-function accept(firstInvite) {
+function selectBtnFrom(firstChild) {
   console.log(arguments.callee.name);
 
-  const acceptBtn = firstInvite
+  const AcceptBtn = firstChild.querySelector('button[data-control-name="accept"]');
+  console.log(AcceptBtn);
+  return AcceptBtn;
+};
+
+function click(acceptBtn) {
+  console.log(arguments.callee.name);
+
   console.log(acceptBtn);
   acceptBtn.click();
 };
 
-
-function clickMessageBtn() {
+function clickMessagePopup() {
   console.log(arguments.callee.name);
 
   const messageBtn = document.querySelector('p.artdeco-toast-message > button.action');
@@ -34,8 +40,14 @@ function clickMessageBtn() {
 };
 
 function run() {
-  const list = listExists() if listExists()
-}
+  const list = selectList();
+  if (list === null) return;
+
+  const firstInvite = selectFirstFrom(list);
+  const acceptBtn = selectBtnFrom(firstInvite);
+  click(acceptBtn);
+  window.setTimeout(clickMessagePopup, 1500);
+};
 
 
 // Running the script

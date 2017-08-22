@@ -2,7 +2,8 @@ console.log("accept-invite.js injected")
 
 // Functions
 function clickAcceptBtn() {
-  console.log("clickAcceptBtn");
+  console.log(arguments.callee.name);
+
   const list = inviteExists();
   console.log(list);
 
@@ -18,14 +19,16 @@ function clickAcceptBtn() {
 };
 
 function inviteExists() {
-  console.log("inviteExists");
+  console.log(arguments.callee.name);
+
   const inviteList = document.querySelector('ul.mn-invitation-list');
   console.log(inviteList);
   return inviteList;
 };
 
 function clickMessageBtn() {
-  console.log("clickMessageBtn");
+  console.log(arguments.callee.name);
+
   const messageBtn = document.querySelector('p.artdeco-toast-message > button.action');
   console.log(messageBtn);
   messageBtn.click();

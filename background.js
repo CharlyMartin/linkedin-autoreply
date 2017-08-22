@@ -20,6 +20,7 @@
 // // Button "Message" (thing to click)
 // #ember1610 > div > div > p > button
 
+#ember1657 > div > div > p > button
 
 function pending() {
   if (inviteList) {

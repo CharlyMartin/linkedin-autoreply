@@ -1,8 +1,8 @@
-console.log("This is the invitation page")
+console.log("accept-invite.js injected")
 
 // Functions
-function acceptInvite() {
-  console.log("Entering acceptInvite function");
+function clickAcceptBtn() {
+  console.log("clickAcceptBtn");
   const list = inviteExists();
   console.log(list);
 
@@ -10,7 +10,7 @@ function acceptInvite() {
     const acceptBtn = list.querySelector('li:first-child button[data-control-name="accept"]');
     console.log(acceptBtn);
     acceptBtn.click();
-    window.setTimeout(clickMessagePopup, 1000);
+    window.setTimeout(clickMessageBtn, 1500);
   }
   else {
     window.alert("All invitations caught up");
@@ -18,21 +18,21 @@ function acceptInvite() {
 };
 
 function inviteExists() {
-  console.log("Entering inviteExists function");
+  console.log("inviteExists");
   const inviteList = document.querySelector('ul.mn-invitation-list');
   console.log(inviteList);
   return inviteList;
 };
 
-function clickMessagePopup() {
-  console.log("Entering clickMessagePopup function");
-  const messageBtn = document.querySelector('#ember1610 > div > div > p > button');
+function clickMessageBtn() {
+  console.log("clickMessageBtn");
+  const messageBtn = document.querySelector('p.artdeco-toast-message > button.action');
   console.log(messageBtn);
-
-}
+  messageBtn.click();
+};
 
 // Running page's scripts after 1.5s
-window.setTimeout(acceptInvite, 1500)
+window.setTimeout(clickAcceptBtn, 1500);
 
 
 // document.addEventListener('load', test) => not working

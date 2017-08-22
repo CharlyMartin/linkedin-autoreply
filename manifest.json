@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "version": "1.0",
   "name": "LinkedIn AutoReply",
-  "description": "Accept new LinkedIn connections and send them custom messages in just one click",
+  "description": "Accept new LinkedIn connection requests and send them the custom messages of your choice in just in just one click",
 
   "browser_action": {
     "default_icon": "assets/icon.png",
@@ -11,15 +11,21 @@
     // default title is a popup message when the icon is hovered over
   },
 
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.linkedin.com/mynetwork/invitation-manager/",
-        "https://www.linkedin.com/mynetwork/"
-      ],
-      "js": ["scripts/accept-invite.js"]
-    }
+  "permissions": [
+    "https://www.linkedin.com/mynetwork/invitation-manager/",
+    "https://www.linkedin.com/mynetwork/"
   ],
-  "author": "Charly MARTIN"
 
+  // "content_scripts": [
+  //   {
+  //     "matches": [
+  //       "https://www.linkedin.com/mynetwork/invitation-manager/",
+  //       "https://www.linkedin.com/mynetwork/"
+  //     ],
+  //     "js": ["scripts/accept-invite.js"]
+  //   }
+  // ],
+  "author": "Charly MARTIN"
 }
+
+// "https://www.linkedin.com/messaging/compose/?after=mynetwork.index&recipient=ACoAAA1cYRkBCN1IVemZfm6uSgF56ATh3udyEYU"

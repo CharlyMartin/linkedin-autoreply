@@ -34,7 +34,7 @@ function clickMessageBtn() {
   messageBtn.click();
 };
 
-// Running page's scripts after 1.5s
+// Running the script
 window.setTimeout(clickAcceptBtn, 1500);
 
 

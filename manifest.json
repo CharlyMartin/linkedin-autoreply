@@ -16,16 +16,18 @@
     "https://www.linkedin.com/mynetwork/"
   ],
 
-  // "content_scripts": [
-  //   {
-  //     "matches": [
-  //       "https://www.linkedin.com/mynetwork/invitation-manager/",
-  //       "https://www.linkedin.com/mynetwork/"
-  //     ],
-  //     "js": ["scripts/accept-invite.js"]
-  //   }
-  // ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/mynetwork/invitation-manager/",
+        "https://www.linkedin.com/mynetwork/"
+      ],
+      "js": ["scripts/accept-invite.js"]
+    },
+    {
+      "matches": ["https://www.linkedin.com/messaging/compose/?after=mynetwork.index*"],
+      "js": ["scripts/send-message.js"]
+    }
+  ],
   "author": "Charly MARTIN"
 }
-
-// "https://www.linkedin.com/messaging/compose/?after=mynetwork.index&recipient=ACoAAA1cYRkBCN1IVemZfm6uSgF56ATh3udyEYU"

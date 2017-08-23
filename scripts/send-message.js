@@ -22,15 +22,37 @@ function buildMessageWith(name) {
 function fillBoxWith(message) {
   console.log(arguments.callee.name);
 
-  document.querySelector("textarea.msg-compose-form__message-text").value = message;
-  document.querySelector("textarea.msg-compose-form__message-text").blur();
-  document.querySelector("textarea.msg-compose-form__message-text").focus();
+  const textArea = document.querySelector("textarea.msg-compose-form__message-text");
+
+  textArea.focus();
+  textArea.value = message;
 };
 
-function clickSendBtn() {
+function selectBtn() {
   console.log(arguments.callee.name);
 
-  document.querySelector("button.msg-compose-form__send-button").click();
+  const sendBtn = document.querySelector("button.msg-compose-form__send-button");
+  console.log(sendBtn);
+  return sendBtn;
+};
+
+function randomClick() {
+  const container = document.querySelector("#messaging");
+  container.click();
+};
+
+function removeDisabledFrom(sendBtn) {
+  console.log(arguments.callee.name);
+
+  sendBtn.removeAttribute("disabled");
+};
+
+function clickOn(sendBtn) {
+  console.log(arguments.callee.name);
+
+  console.log(sendBtn);
+  sendBtn.click();
+
 };
 
 function run() {
@@ -39,14 +61,14 @@ function run() {
   const name = extractName();
   const message = buildMessageWith(name);
   fillBoxWith(message);
-  // Need to wait little time before beling able to click on button.
-  // Need to figure out which event fires the disable false on button.
-  // window.setTimeout(clickSendBtn, 500);
+
+  const sendBtn = selectBtn();
+  removeDisabledFrom(sendBtn);
+  clickOn(sendBtn);
 };
 
 // Running the script
-window.setTimeout(run, 2000);
+window.setTimeout(run, 3000);
 
 
-// Send the message
-// document.querySelector("button.msg-compose-form__send-button").click()
+// Trash

@@ -22,9 +22,10 @@ function buildMessageWith(name) {
 function fillBoxWith(message) {
   console.log(arguments.callee.name);
 
+  // const pre = document.querySelector("pre.msg-compose-form__textarea-clone");
   const textArea = document.querySelector("textarea.msg-compose-form__message-text");
 
-  textArea.focus();
+  // pre.innerText = message;
   textArea.value = message;
 };
 
@@ -36,10 +37,10 @@ function selectBtn() {
   return sendBtn;
 };
 
-function randomClick() {
-  const container = document.querySelector("#messaging");
-  container.click();
-};
+// function randomClick() {
+//   const container = document.querySelector("#messaging");
+//   container.click();
+// };
 
 function removeDisabledFrom(sendBtn) {
   console.log(arguments.callee.name);
@@ -70,5 +71,3 @@ function run() {
 // Running the script
 window.setTimeout(run, 3000);
 
-
-// Trash

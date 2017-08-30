@@ -15,7 +15,9 @@ function buildMessageWith(name) {
   console.log(arguments.callee.name);
 
   const first = name.first;
-  const welcomeMessage = `Hello ${first}, happy to meet you 🙂`;
+  const welcomeMessage =
+    `Hi ${first},\n\nThanks for the invitation, I'm glad to meet you!\n\nIs there anything I can do for you? If so, I’m happy to help 🙂\n\nCheers,\nCharly\n\nhttps://charlymartin.me`;
+
   return welcomeMessage;
 };
 
@@ -53,8 +55,8 @@ function clickOn(sendBtn) {
 
   console.log(sendBtn);
   sendBtn.click();
-
 };
+
 
 function run() {
   console.log(arguments.callee.name);
@@ -63,9 +65,9 @@ function run() {
   const message = buildMessageWith(name);
   fillBoxWith(message);
 
-  const sendBtn = selectBtn();
-  removeDisabledFrom(sendBtn);
-  clickOn(sendBtn);
+  // const sendBtn = selectBtn();
+  // removeDisabledFrom(sendBtn);
+  // clickOn(sendBtn);
 };
 
 // Running the script

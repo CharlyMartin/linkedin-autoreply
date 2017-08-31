@@ -20,17 +20,18 @@
 // // Button "Message" (thing to click)
 // #ember1610 > div > div > p > button
 
-#ember1657 > div > div > p > button
+// #ember1657 > div > div > p > button
 
-function pending() {
-  if (inviteList) {
-    return true
-  } else {
-    return false
-  }
-};
+// function pending() {
+//   if (inviteList) {
+//     return true
+//   } else {
+//     return false
+//   }
+// };
 
-function run() {
+function init() {
+  console.log("Hello world!");
   // Navigate to /mynetwork/invitation-manager/
   // call pending() -> Check if any pending invitations
   // return if no invite
@@ -38,6 +39,8 @@ function run() {
   // inject Accept invite script
   // When message page loaded -> inject second script
   // When back to /mynetwork/invitation-manager/ -> inject Accept invite script again...
-}
+};
 
-chrome.BrowserAction.onClicked.addListener(run)
+// chrome.BrowserAction.onClicked.addListener(run)
+//
+chrome.browserAction.onClicked.addListener(function(tab) {console.log(tab)});

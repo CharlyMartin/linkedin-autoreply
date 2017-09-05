@@ -51,7 +51,7 @@ function run() {
 
 
 // Running the script
-window.setTimeout(run, 1500);
+window.setTimeout(run, 3000);
 
 
 // document.addEventListener('load', test) => not working

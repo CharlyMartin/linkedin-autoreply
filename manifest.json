@@ -6,14 +6,16 @@
   "author": "Charly MARTIN",
 
   "browser_action": {
-    "default_icon": "assets/icon.png",
-    // "default_popup": "popup.html",
     "default_title": "LinkedIn AR"
-    // default title is a popup message when the icon is hovered over
   },
 
   "background": {
     "scripts": ["background.js"]
+  },
+
+  "icons": {
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
   },
 
   // "content_scripts": [

@@ -12,7 +12,7 @@ function selectList() {
 function selectFirstFrom(list) {
   console.log(arguments.callee.name);
 
-  const first = list.querySelector('li:first-child');
+  const first = list.querySelector("li.mn-invitation-card:not(.mn-person-card--dismiss-complete)");
   console.log(first);
   return first;
 };

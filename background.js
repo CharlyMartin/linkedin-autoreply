@@ -1,30 +1,30 @@
-const invitePage = "https://www.linkedin.com/mynetwork/invitation-manager/";
+const invitePage = "https://www.linkedin.com/mynetwork/invitation-manager";
 const messagePage = "https://www.linkedin.com/messaging/compose/?after=mynetwork";
 
 
-function invitePageMatches(tab) {
-  return tab.url.includes(invitePage)
+function match(tab, page) {
+  return tab.url.includes(page);
 };
 
-function messagePageMatches(tab) {
-  return tab.url.includes(messagePage)
+function goTo(Linkedin) {
+  chrome.tabs.create({ url: Linkedin });
 };
 
 
-chrome.browserAction.onClicked.addListener((activeTab) => {
+chrome.browserAction.onClicked.addListener((tab) => {
 
-  if (!invitePageMatches(activeTab) || !messagePageMatches(activeTab)) {
-    chrome.tabs.create({ url: inviteManager });
-  }
+  // if (!match(tab, invitePage) || !match(tab, messagePage)) {
+  //   goTo(invitePage);
+  // };
 
-  if (invitePageMatches(activeTab)) {
-    chrome.tabs.executeScript(activeTab.id, {
+  if (match(tab, invitePage)) {
+    chrome.tabs.executeScript(tab.id, {
       file: 'scripts/accept-invite.js'
     });
    }
 
-  if (messagePageMatches(activeTab)) {
-    chrome.tabs.executeScript(activeTab.id, {
+  if (match(tab, messagePage)) {
+    chrome.tabs.executeScript(tab.id, {
       file: 'scripts/send-message.js'
     });
    }

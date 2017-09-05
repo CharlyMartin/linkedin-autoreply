@@ -71,5 +71,5 @@ function run() {
 };
 
 // Running the script
-window.setTimeout(run, 3000);
+window.setTimeout(run, 100);
 

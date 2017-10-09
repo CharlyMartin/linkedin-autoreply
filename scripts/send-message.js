@@ -16,7 +16,7 @@ function buildMessageWith(name) {
 
   const first = name.first;
   const welcomeMessage =
-    `Hi ${first},\n\nThanks for the invitation, I'm glad to meet you!\n\nIs there anything I can do for you? If so, I’m happy to help 🙂\n\nHave a nice day.\n\nCharly\n–\n💻 https://charlymartin.me\n🚀 https://www.lewagon.com/sydney`;
+    `Hi ${first},\n\nThanks for the invitation, I'm glad to meet you!\n\nIs there anything I can do for you? If so, I’m happy to help 🙂\n\nHave a nice day.\n\nCharly\n–\n👋 https://charlymartin.me\n💻 https://www.lewagon.com/sydney`;
 
   return welcomeMessage;
 };
